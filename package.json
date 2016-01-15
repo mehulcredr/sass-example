@@ -1,0 +1,24 @@
+{
+  "name": "sass-tryout",
+  "version": "1.0.0",
+  "description": "Testing SASS before implementing on live",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehulcredr/sass-example.git"
+  },
+  "keywords": [
+    "SASS"
+  ],
+  "author": "mehul@credr.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehulcredr/sass-example/issues"
+  },
+  "homepage": "https://github.com/mehulcredr/sass-example#readme"
+}
