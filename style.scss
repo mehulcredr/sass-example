@@ -1,7 +1,25 @@
 $primaryColor: #000000;
-$secondaryColor: green;
+$secondaryColor: #FFFFFF;
+$fullWidth: 100%;
 
+// Variable example
 body {
+	background: $primaryColor;
+}
+
+// Math example
+h1 {
+	width: $fullWidth/4;
+}
+
+// Inheritance example
+input {
 	background: $primaryColor;
 	color: $secondaryColor;
 }
+
+.my-input {
+	@extend input
+}
+
+// "&" ampersand example
