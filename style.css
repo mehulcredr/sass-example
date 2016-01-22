@@ -1,9 +1,73 @@
+/* This comment will appear in CSS */
 body {
-  background: #000000; }
+  background: #DAA520; }
 
 h1 {
   width: 25%; }
 
 input, .my-input {
-  background: #000000;
+  background: #DAA520;
   color: #FFFFFF; }
+
+.button1 {
+  background: #009900;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer; }
+
+.box {
+  margin-top: 150px;
+  padding-top: 150px;
+  height: 50px;
+  background: #FFFFFF; }
+
+a {
+  color: #999999; }
+  a:hover {
+    color: green; }
+
+a {
+  color: #000000; }
+  p a {
+    color: #009900; }
+
+.div1 {
+  color: blue; }
+  .div1 .nested-div {
+    color: green; }
+
+a {
+  color: black; }
+  a:hover {
+    color: blue; }
+
+a {
+  color: black; }
+  .div1 a {
+    color: blue; }
+
+p {
+  margin-top: 30px; }
+
+p .bike-head {
+  color: #000000; }
+
+.test1 {
+  color: red;
+  background-color: black; }
+
+.test2 {
+  border-radius: 20px;
+  height: 50px;
+  background: #FFFFFF;
+  color: #000000;
+  text-align: center; }
+
+.Rock:before {
+  content: "Rock"; }
+
+.Paper:before {
+  content: "Paper"; }
+
+.Scissor:before {
+  content: "Scissor"; }

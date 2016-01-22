@@ -1,6 +1,12 @@
-$primaryColor: #000000;
+$primaryColor: #DAA520;
 $secondaryColor: #FFFFFF;
 $fullWidth: 100%;
+$thirdColor: #009900;
+$currentSide: top;
+$myClass: "bike-head";
+
+/* This comment will appear in CSS */
+// This comment will not appear in CSS
 
 // Variable example
 body {
@@ -12,7 +18,7 @@ h1 {
 	width: $fullWidth/4;
 }
 
-// Inheritance example
+// Extend example
 input {
 	background: $primaryColor;
 	color: $secondaryColor;
@@ -22,4 +28,110 @@ input {
 	@extend input
 }
 
+// Mixin example
+@mixin simpleButton {
+  background: $thirdColor;
+  color: $secondaryColor;
+  border: none;
+}
+
+// Mixin example with arguments
+@mixin spaceAbove($x: 200) {
+  margin-top: #{$x/2}px;
+  padding-top: #{$x/2}px;
+}
+
+.button1 {
+  @include simpleButton;
+  cursor: pointer;
+}
+.box {
+  @include spaceAbove(300);
+  height: 50px;
+  background: #FFFFFF;
+}
+
 // "&" ampersand example
+a {
+	color: #999999;
+	&:hover {
+		color: green;
+	}
+}
+
+a {
+  color: #000000;
+  p & {
+    color: $thirdColor;
+  }
+}
+
+// Nesting
+.div1 {
+  color: blue;
+  .nested-div {
+    color: green;
+  }
+}
+
+a {
+  color: black;
+  &:hover {
+    color: blue;
+  }
+}
+
+a {
+  color: black;
+  .div1 & {
+    color: blue;
+  }
+}
+
+// variables in attributes, classnames
+p {
+  margin-#{$currentSide}: 30px;
+}
+
+p .#{$myClass} {
+  color: #000000;
+}
+
+// Placeholders
+%test {
+  color: red;
+  background-color: black;
+}
+
+.test1 {
+  @extend %test;
+}
+
+// if
+@mixin addRadius($radius) {
+  @if $radius {
+    border-radius: $radius;
+  }
+}
+
+.test2 {
+  @include addRadius(20px);
+  height: 50px;
+  background: #FFFFFF;
+  color: #000000;
+  text-align: center
+}
+
+// for
+$items: Rock, Paper, Scissor;
+@each $item in $items {
+  .#{$item}:before {
+    content: "#{$item}";
+  }
+}
+
+
+
+
+
+
